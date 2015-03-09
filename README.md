@@ -1,4 +1,5 @@
 # feather
+<<<<<<< HEAD
 A new way to meet those who matter to you.
 
 # TODO
@@ -6,3 +7,6 @@ A new way to meet those who matter to you.
 
 # notes
 MAKE YOUR OWN BRANCHES PLEASEEEEE
+=======
+Never eat alone.
+>>>>>>> added mockups
