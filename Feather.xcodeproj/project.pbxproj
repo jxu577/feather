@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B8178971AAD5044006EF807 /* EventListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8178961AAD5044006EF807 /* EventListTableViewController.m */; };
 		BD03C75A1AA698F2003BACEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD03C7591AA698F2003BACEE /* main.m */; };
 		BD03C75D1AA698F2003BACEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD03C75C1AA698F2003BACEE /* AppDelegate.m */; };
 		BD03C7601AA698F2003BACEE /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD03C75F1AA698F2003BACEE /* RootViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B8178951AAD5044006EF807 /* EventListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListTableViewController.h; sourceTree = "<group>"; };
+		3B8178961AAD5044006EF807 /* EventListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListTableViewController.m; sourceTree = "<group>"; };
 		BD03C7541AA698F2003BACEE /* Feather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD03C7581AA698F2003BACEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD03C7591AA698F2003BACEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				BD03C7641AA698F2003BACEE /* ModelController.h */,
 				BD03C7651AA698F2003BACEE /* ModelController.m */,
 				BD03C7671AA698F2003BACEE /* Main.storyboard */,
+				3B8178951AAD5044006EF807 /* EventListTableViewController.h */,
+				3B8178961AAD5044006EF807 /* EventListTableViewController.m */,
 				BD03C76A1AA698F2003BACEE /* Images.xcassets */,
 				BD03C76C1AA698F2003BACEE /* LaunchScreen.xib */,
 				BD03C7571AA698F2003BACEE /* Supporting Files */,
@@ -233,6 +238,7 @@
 				BD03C75D1AA698F2003BACEE /* AppDelegate.m in Sources */,
 				BD03C7661AA698F2003BACEE /* ModelController.m in Sources */,
 				BD03C75A1AA698F2003BACEE /* main.m in Sources */,
+				3B8178971AAD5044006EF807 /* EventListTableViewController.m in Sources */,
 				BD03C7601AA698F2003BACEE /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +432,7 @@
 				BD03C77F1AA698F2003BACEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD03C7801AA698F2003BACEE /* Build configuration list for PBXNativeTarget "FeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +441,7 @@
 				BD03C7821AA698F2003BACEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
