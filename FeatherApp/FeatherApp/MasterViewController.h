@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+
 
 @end
 

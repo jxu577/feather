@@ -16,6 +16,7 @@
 		3B2F9D271AB2A8330029F357 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F9D251AB2A8330029F357 /* LaunchScreen.xib */; };
 		3B2F9D331AB2A8330029F357 /* FeatherAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F9D321AB2A8330029F357 /* FeatherAppTests.m */; };
 		4F885BB31AB2B26500DF24EE /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F885BB21AB2B26500DF24EE /* Event.m */; };
+		4F885BB61AB2C33F00DF24EE /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F885BB51AB2C33F00DF24EE /* AddEventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		3B2F9D321AB2A8330029F357 /* FeatherAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeatherAppTests.m; sourceTree = "<group>"; };
 		4F885BB11AB2B26500DF24EE /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		4F885BB21AB2B26500DF24EE /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		4F885BB41AB2C33F00DF24EE /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
+		4F885BB51AB2C33F00DF24EE /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				3B2F9D1D1AB2A8320029F357 /* DetailViewController.h */,
 				3B2F9D1E1AB2A8320029F357 /* DetailViewController.m */,
 				3B2F9D201AB2A8330029F357 /* Main.storyboard */,
+				4F885BB41AB2C33F00DF24EE /* AddEventViewController.h */,
+				4F885BB51AB2C33F00DF24EE /* AddEventViewController.m */,
 				3B2F9D231AB2A8330029F357 /* Images.xcassets */,
 				3B2F9D251AB2A8330029F357 /* LaunchScreen.xib */,
 				3B2F9D131AB2A8320029F357 /* Supporting Files */,
@@ -234,6 +239,7 @@
 				4F885BB31AB2B26500DF24EE /* Event.m in Sources */,
 				3B2F9D161AB2A8320029F357 /* main.m in Sources */,
 				3B2F9D1F1AB2A8330029F357 /* DetailViewController.m in Sources */,
+				4F885BB61AB2C33F00DF24EE /* AddEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
