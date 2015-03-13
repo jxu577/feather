@@ -15,6 +15,7 @@
 		3B2F9D241AB2A8330029F357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F9D231AB2A8330029F357 /* Images.xcassets */; };
 		3B2F9D271AB2A8330029F357 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F9D251AB2A8330029F357 /* LaunchScreen.xib */; };
 		3B2F9D331AB2A8330029F357 /* FeatherAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F9D321AB2A8330029F357 /* FeatherAppTests.m */; };
+		4F885BB31AB2B26500DF24EE /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F885BB21AB2B26500DF24EE /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		3B2F9D2C1AB2A8330029F357 /* FeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2F9D311AB2A8330029F357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B2F9D321AB2A8330029F357 /* FeatherAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeatherAppTests.m; sourceTree = "<group>"; };
+		4F885BB11AB2B26500DF24EE /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		4F885BB21AB2B26500DF24EE /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				3B2F9D181AB2A8320029F357 /* AppDelegate.m */,
 				3B2F9D1A1AB2A8320029F357 /* MasterViewController.h */,
 				3B2F9D1B1AB2A8320029F357 /* MasterViewController.m */,
+				4F885BB11AB2B26500DF24EE /* Event.h */,
+				4F885BB21AB2B26500DF24EE /* Event.m */,
 				3B2F9D1D1AB2A8320029F357 /* DetailViewController.h */,
 				3B2F9D1E1AB2A8320029F357 /* DetailViewController.m */,
 				3B2F9D201AB2A8330029F357 /* Main.storyboard */,
@@ -226,6 +231,7 @@
 			files = (
 				3B2F9D191AB2A8320029F357 /* AppDelegate.m in Sources */,
 				3B2F9D1C1AB2A8320029F357 /* MasterViewController.m in Sources */,
+				4F885BB31AB2B26500DF24EE /* Event.m in Sources */,
 				3B2F9D161AB2A8320029F357 /* main.m in Sources */,
 				3B2F9D1F1AB2A8330029F357 /* DetailViewController.m in Sources */,
 			);
@@ -420,6 +426,7 @@
 				3B2F9D381AB2A8330029F357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B2F9D391AB2A8330029F357 /* Build configuration list for PBXNativeTarget "FeatherAppTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +435,7 @@
 				3B2F9D3B1AB2A8330029F357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

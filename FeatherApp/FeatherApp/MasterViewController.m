@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "Event.h"
 
 @interface MasterViewController ()
 
@@ -43,7 +44,10 @@
     if (!self.objects) {
         self.objects = [[NSMutableArray alloc] init];
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
+    Event *event = [[Event alloc] init];
+    event.title = @"Event";
+    event.date = [NSDate date];
+    [self.objects insertObject:event atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -74,8 +78,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    Event *event = self.objects[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", event.title, [event.date description]];
     return cell;
 }
 
