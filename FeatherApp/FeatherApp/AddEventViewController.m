@@ -9,9 +9,11 @@
 #import "AddEventViewController.h"
 
 @interface AddEventViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *eventname;
+@property (weak, nonatomic) IBOutlet UITextField *eventName;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
+@property (weak, nonatomic) IBOutlet UITextField *eventDescription;
+
 
 @end
 
@@ -38,5 +40,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if (sender != self.saveButton) return;
+    if (self.eventName.text.length > 0) {
+        self.event = [[Event alloc] init];
+        self.event.title = self.eventName.text;
+        self.event.desc = self.eventDescription.text;
+    }
+}
 
 @end

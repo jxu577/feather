@@ -60,7 +60,6 @@
         <!--Navigation Controller-->
         <scene sceneID="5a7-mx-7IJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Qc-HB-Pcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="qHN-SA-PfW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DQ0-0j-bfR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -70,6 +69,7 @@
                         <segue destination="FWd-eJ-9mr" kind="relationship" relationship="rootViewController" id="8NC-YQ-w2V"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Qc-HB-Pcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1454" y="-630"/>
         </scene>
@@ -148,30 +148,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="event name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y5h-n4-ny2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="event name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y5h-n4-ny2" userLabel="eventname">
                                 <rect key="frame" x="24" y="298" width="553" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spQ-Fw-fvt">
+                                <rect key="frame" x="31" y="382" width="553" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="spQ-Fw-fvt" firstAttribute="leading" secondItem="RYe-n9-LYf" secondAttribute="leadingMargin" constant="8" id="18C-1K-tIa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y5h-n4-ny2" secondAttribute="trailing" constant="7" id="6nI-gN-p42"/>
                             <constraint firstAttribute="centerX" secondItem="Y5h-n4-ny2" secondAttribute="centerX" id="73b-k4-5u4"/>
+                            <constraint firstAttribute="centerX" secondItem="spQ-Fw-fvt" secondAttribute="centerX" id="Kw8-Ux-VdE"/>
                             <constraint firstAttribute="centerY" secondItem="Y5h-n4-ny2" secondAttribute="centerY" id="bYE-To-LdQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ap8-rc-LSW">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8Qa-Ta-6Hs">
                             <connections>
-                                <segue destination="FpL-Uv-xI7" kind="unwind" unwindAction="unwindToList:" id="G18-vg-9Ca"/>
+                                <segue destination="FpL-Uv-xI7" kind="unwind" unwindAction="unwindToList:" id="aVD-Fo-3Zg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="MIJ-O1-hg6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="MIJ-O1-hg6">
+                            <connections>
+                                <segue destination="FpL-Uv-xI7" kind="unwind" unwindAction="unwindToList:" id="dpN-jk-138"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButton" destination="8Qa-Ta-6Hs" id="9mv-Ln-L2W"/>
-                        <outlet property="eventname" destination="Y5h-n4-ny2" id="RtZ-AT-7mc"/>
+                        <outlet property="eventDescription" destination="spQ-Fw-fvt" id="cuN-nv-X5B"/>
+                        <outlet property="eventName" destination="Y5h-n4-ny2" id="Fhv-0r-sJT"/>
                         <outlet property="saveButton" destination="MIJ-O1-hg6" id="Pgd-VC-2t2"/>
                     </connections>
                 </viewController>

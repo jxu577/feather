@@ -11,6 +11,7 @@
 @interface Event : NSObject
 
 @property NSString *title;
+@property NSString *desc;
 @property NSDate *date;
 
 @end

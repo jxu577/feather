@@ -11,6 +11,6 @@
 
 @interface AddEventViewController : UIViewController
 
-
+@property Event *event;
 
 @end

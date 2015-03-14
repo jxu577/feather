@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "Event.h"
+#import "AddEventViewController.h"
 
 @interface MasterViewController ()
 
@@ -18,7 +19,15 @@
 @implementation MasterViewController
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
-    
+    AddEventViewController *source = [segue sourceViewController];
+    Event *item = source.event;
+    if (item != nil) {
+        if (!self.objects) {
+            self.objects = [[NSMutableArray alloc] init];
+        }
+        [self.objects insertObject:item atIndex:0];
+        [self.tableView reloadData];
+    }
 }
 
 - (void)awakeFromNib {
@@ -67,6 +76,8 @@
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
+    
+    
 }
 
 #pragma mark - Table View
@@ -83,7 +94,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     Event *event = self.objects[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", event.title, [event.date description]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", event.title, event.desc];
     return cell;
 }
 

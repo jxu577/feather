@@ -30,7 +30,7 @@
     // Update the user interface for the detail item.
     if (self.detailItem) {
         Event *event = self.detailItem;
-        self.detailDescriptionLabel.text = event.title;
+        self.detailDescriptionLabel.text =[NSString stringWithFormat:@"%@/%@", event.title, event.desc];
     }
 }
 
