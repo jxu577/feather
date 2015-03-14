@@ -10,6 +10,8 @@
 #import "DetailViewController.h"
 #import "Event.h"
 
+#import "Parse/Parse.h"
+
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
