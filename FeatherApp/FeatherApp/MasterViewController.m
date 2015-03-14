@@ -18,6 +18,8 @@
 
 @implementation MasterViewController
 
+
+
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
     AddEventViewController *source = [segue sourceViewController];
     Event *item = source.event;
@@ -94,7 +96,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     Event *event = self.objects[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", event.title, event.desc];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", event.title];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",event.desc];
     return cell;
 }
 
