@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Parse/Parse.h"
 #import "DetailViewController.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
@@ -17,6 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Initialize Parse.
+    [Parse setApplicationId:@"W2WPG6sm1CJENSQSpqmVOySkeu3CtgvULJWj1zmX"
+                  clientKey:@"FYSLKXxXVNmBv2tLkLnKJp8VthHJzgoKMPorQL71"];
+
     // Override point for customization after application launch.
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
