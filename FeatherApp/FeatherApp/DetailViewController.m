@@ -10,6 +10,7 @@
 #import "Event.h"
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UIView *date;
 
 @end
 
@@ -30,6 +31,7 @@
     // Update the user interface for the detail item.
     if (self.detailItem) {
         Event *event = self.detailItem;
+        //self.detailDescriptionLabel.text = [NSString stringWithFormat:@"%@",event.date];
         self.detailDescriptionLabel.text =[NSString stringWithFormat:@"%@/%@", event.title, event.desc];
     }
 }

@@ -12,8 +12,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *eventName;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
-@property (weak, nonatomic) IBOutlet UITextField *eventDescription;
 
+@property (weak, nonatomic) IBOutlet UITextView *eventDescription;
+@property (weak, nonatomic) IBOutlet UIDatePicker *date;
 
 @end
 
@@ -47,6 +48,7 @@
         self.event = [[Event alloc] init];
         self.event.title = self.eventName.text;
         self.event.desc = self.eventDescription.text;
+        self.event.date = [self.date date];
     }
 }
 
