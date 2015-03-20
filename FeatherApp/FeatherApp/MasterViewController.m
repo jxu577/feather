@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "Event.h"
+#import "AddEventViewController.h"
 
 #import "Parse/Parse.h"
 
@@ -18,6 +19,20 @@
 @end
 
 @implementation MasterViewController
+
+
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    AddEventViewController *source = [segue sourceViewController];
+    Event *item = source.event;
+    if (item != nil) {
+        if (!self.objects) {
+            self.objects = [[NSMutableArray alloc] init];
+        }
+        [self.objects insertObject:item atIndex:0];
+        [self.tableView reloadData];
+    }
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -31,9 +46,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    //Comments for example code
+   // UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+  //  self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -42,7 +57,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender {
+//Comments for example code
+/*- (void)insertNewObject:(id)sender {
     if (!self.objects) {
         self.objects = [[NSMutableArray alloc] init];
     }
@@ -52,7 +68,7 @@
     [self.objects insertObject:event atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
+}*/
 
 #pragma mark - Segues
 
@@ -65,6 +81,8 @@
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
+    
+    
 }
 
 #pragma mark - Table View
@@ -81,7 +99,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     Event *event = self.objects[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", event.title, [event.date description]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", event.title];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",event.desc];
     return cell;
 }
 
