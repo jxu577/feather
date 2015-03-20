@@ -15,6 +15,7 @@
 		3B2F9D241AB2A8330029F357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F9D231AB2A8330029F357 /* Images.xcassets */; };
 		3B2F9D271AB2A8330029F357 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F9D251AB2A8330029F357 /* LaunchScreen.xib */; };
 		3B2F9D331AB2A8330029F357 /* FeatherAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F9D321AB2A8330029F357 /* FeatherAppTests.m */; };
+		3BB0ED181ABC0101000ED2F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB0ED171ABC0101000ED2F0 /* SWRevealViewController.m */; };
 		3BBF369E1AB4F44700D5355D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBF369C1AB4F44700D5355D /* Parse.framework */; };
 		3BBF369F1AB4F44700D5355D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBF369D1AB4F44700D5355D /* Bolts.framework */; };
 		3BBF36A11AB4F62100D5355D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBF36A01AB4F62100D5355D /* AudioToolbox.framework */; };
@@ -57,6 +58,8 @@
 		3B2F9D2C1AB2A8330029F357 /* FeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2F9D311AB2A8330029F357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B2F9D321AB2A8330029F357 /* FeatherAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeatherAppTests.m; sourceTree = "<group>"; };
+		3BB0ED171ABC0101000ED2F0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		3BB0ED191ABC015F000ED2F0 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		3BBF369C1AB4F44700D5355D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		3BBF369D1AB4F44700D5355D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		3BBF36A01AB4F62100D5355D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,7 @@
 		3B2F9D121AB2A8320029F357 /* FeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				3BB0ED161ABC00E1000ED2F0 /* SWRevealViewController */,
 				3B2F9D171AB2A8320029F357 /* AppDelegate.h */,
 				3B2F9D181AB2A8320029F357 /* AppDelegate.m */,
 				3B2F9D1A1AB2A8320029F357 /* MasterViewController.h */,
@@ -167,6 +171,15 @@
 				3B2F9D311AB2A8330029F357 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BB0ED161ABC00E1000ED2F0 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BB0ED191ABC015F000ED2F0 /* SWRevealViewController.h */,
+				3BB0ED171ABC0101000ED2F0 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		3BBF369B1AB4F41E00D5355D /* Frameworks */ = {
@@ -289,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB0ED181ABC0101000ED2F0 /* SWRevealViewController.m in Sources */,
 				3B2F9D191AB2A8320029F357 /* AppDelegate.m in Sources */,
 				3B2F9D1C1AB2A8320029F357 /* MasterViewController.m in Sources */,
 				4F885BB31AB2B26500DF24EE /* Event.m in Sources */,
