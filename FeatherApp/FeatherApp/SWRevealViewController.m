@@ -356,6 +356,9 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     UIViewController *_fromVC;
     void (^_completion)(void);
 }
+- (CGAffineTransform)targetTransform {
+    return self.targetTransform;
+}
 
 
 - (id)initWithRevealController:(SWRevealViewController*)revealVC containerView:(UIView*)view fromVC:(UIViewController*)fromVC

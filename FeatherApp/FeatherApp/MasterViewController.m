@@ -8,6 +8,8 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "SWRevealViewController.h"
+
 #import "Event.h"
 
 #import "Parse/Parse.h"
@@ -32,9 +34,16 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
+    // TODO make these buttons properties
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+
+  //// set up SWRevealViewController (side menu bar)
+  //SWRevealViewController *revealViewController = self.revealViewController;
+  //if (revealViewController) {
+  //    // TODO
+  //}
 }
 
 - (void)didReceiveMemoryWarning {
