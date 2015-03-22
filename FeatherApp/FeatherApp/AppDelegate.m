@@ -23,10 +23,11 @@
                   clientKey:@"FYSLKXxXVNmBv2tLkLnKJp8VthHJzgoKMPorQL71"];
 
     // Override point for customization after application launch.
-    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
-    splitViewController.delegate = self;
+    // TODO figure out what displayModeButtonItem and delegate does, and delete this as appropriate.
+    // UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    // UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+    // navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+    // splitViewController.delegate = self;
     return YES;
 }
 

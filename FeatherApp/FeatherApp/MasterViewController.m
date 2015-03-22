@@ -17,6 +17,7 @@
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+
 @end
 
 @implementation MasterViewController
@@ -32,18 +33,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    // self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    // TODO make these buttons properties
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 
-  //// set up SWRevealViewController (side menu bar)
-  //SWRevealViewController *revealViewController = self.revealViewController;
-  //if (revealViewController) {
-  //    // TODO
-  //}
+    // Set up + button.
+    if (self.addButton) {
+        [self.addButton setTarget:self];
+        [self.addButton setAction:@selector(insertNewObject:)];
+    }
+
+    // Set up side menu bar.
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController) {
+        [self.menuButton setTarget:revealViewController];
+        [self.menuButton setAction:@selector(revealToggle:)];
+        [self.view addGestureRecognizer:revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

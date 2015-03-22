@@ -130,6 +130,7 @@
 		3B2F9D121AB2A8320029F357 /* FeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				3BF274641ABE406100CB1B19 /* Assets */,
 				3BB0ED161ABC00E1000ED2F0 /* SWRevealViewController */,
 				3B2F9D171AB2A8320029F357 /* AppDelegate.h */,
 				3B2F9D181AB2A8320029F357 /* AppDelegate.m */,
@@ -200,6 +201,13 @@
 				3BBF369D1AB4F44700D5355D /* Bolts.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BF274641ABE406100CB1B19 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

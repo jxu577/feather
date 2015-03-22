@@ -155,7 +155,14 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="3Z3-Dv-3Gf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J0b-1W-VKb"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="J0b-1W-VKb" id="DoI-7K-awo"/>
+                        <outlet property="menuButton" destination="3Z3-Dv-3Gf" id="HEZ-ZQ-0UD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,6 +184,9 @@
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="28" height="20"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
