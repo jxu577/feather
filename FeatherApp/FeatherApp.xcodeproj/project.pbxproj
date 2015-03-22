@@ -30,6 +30,7 @@
 		3BBF36B31AB4F65700D5355D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBF36B21AB4F65700D5355D /* libz.dylib */; };
 		3BBF36B51AB4F65D00D5355D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBF36B41AB4F65D00D5355D /* libsqlite3.dylib */; };
 		4F885BB31AB2B26500DF24EE /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F885BB21AB2B26500DF24EE /* Event.m */; };
+		4F885BB61AB2C33F00DF24EE /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F885BB51AB2C33F00DF24EE /* AddEventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		3BBF36B41AB4F65D00D5355D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4F885BB11AB2B26500DF24EE /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		4F885BB21AB2B26500DF24EE /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		4F885BB41AB2C33F00DF24EE /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
+		4F885BB51AB2C33F00DF24EE /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				3B2F9D1D1AB2A8320029F357 /* DetailViewController.h */,
 				3B2F9D1E1AB2A8320029F357 /* DetailViewController.m */,
 				3B2F9D201AB2A8330029F357 /* Main.storyboard */,
+				4F885BB41AB2C33F00DF24EE /* AddEventViewController.h */,
+				4F885BB51AB2C33F00DF24EE /* AddEventViewController.m */,
 				3B2F9D231AB2A8330029F357 /* Images.xcassets */,
 				3B2F9D251AB2A8330029F357 /* LaunchScreen.xib */,
 				3B2F9D131AB2A8320029F357 /* Supporting Files */,
@@ -316,6 +321,7 @@
 				4F885BB31AB2B26500DF24EE /* Event.m in Sources */,
 				3B2F9D161AB2A8320029F357 /* main.m in Sources */,
 				3B2F9D1F1AB2A8330029F357 /* DetailViewController.m in Sources */,
+				4F885BB61AB2C33F00DF24EE /* AddEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
