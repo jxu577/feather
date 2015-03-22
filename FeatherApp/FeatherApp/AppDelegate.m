@@ -26,16 +26,17 @@
                   clientKey:@"FYSLKXxXVNmBv2tLkLnKJp8VthHJzgoKMPorQL71"];
 
     // Override point for customization after application launch.
-    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
-    splitViewController.delegate = self;
+    // TODO figure out what displayModeButtonItem and delegate does, and delete this as appropriate.
+    // UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    // UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+    // navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+    // splitViewController.delegate = self;
     [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xe1553c)];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
                                                            [UIFont fontWithName:@"arial" size:21.0], NSFontAttributeName, nil]];
-    
+
     return YES;
 }
 
