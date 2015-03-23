@@ -145,6 +145,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="H1p-Uh-vWS" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="KXB-Gt-l8b"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="my_events" textLabel="kdl-7l-euq" style="IBUITableViewCellStyleDefault" id="OEL-y7-rBp">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -336,6 +339,7 @@
         <image name="menu" width="28" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="KXB-Gt-l8b"/>
         <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>
