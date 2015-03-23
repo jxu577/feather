@@ -73,20 +73,6 @@
             </objects>
             <point key="canvasLocation" x="1454" y="-630"/>
         </scene>
-        <!--Split View-->
-        <scene sceneID="Nki-YV-4Qg">
-            <objects>
-                <splitViewController title="Split View" id="H1p-Uh-vWS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <connections>
-                        <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
-                        <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-856" y="-330"/>
-        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="hK1-v7-zNr">
             <objects>
@@ -101,13 +87,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="H1p-Uh-vWS" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="8qk-Lk-zMq"/>
                         <segue destination="zW7-sE-0ga" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="GBj-od-gzB"/>
+                        <segue destination="RMx-3f-FxP" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="mX9-bg-i8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQB-SE-eZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1652" y="-330"/>
+            <point key="canvasLocation" x="-1084" y="-630"/>
         </scene>
         <!--Sidebar View-->
         <scene sceneID="Ls2-hs-VkA">
@@ -146,7 +132,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="H1p-Uh-vWS" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="KXB-Gt-l8b"/>
+                                    <segue destination="RMx-3f-FxP" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="W3C-KM-ZRD"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="my_events" textLabel="kdl-7l-euq" style="IBUITableViewCellStyleDefault" id="OEL-y7-rBp">
@@ -186,7 +172,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHZ-fv-oig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1652" y="529"/>
+            <point key="canvasLocation" x="-1084" y="229"/>
         </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
@@ -223,7 +209,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
+                                    <segue destination="vC3-pB-5Vb" kind="show" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -339,7 +325,6 @@
         <image name="menu" width="28" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KXB-Gt-l8b"/>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="W3C-KM-ZRD"/>
     </inferredMetricsTieBreakers>
 </document>
