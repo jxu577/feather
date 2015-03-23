@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="129"/>
+            <point key="canvasLocation" x="693" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5a7-mx-7IJ">
@@ -138,7 +138,6 @@
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
@@ -194,6 +193,7 @@
                         <outlet property="menuButton" destination="qtn-aE-Fpo" id="ay8-z2-PC8"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="741" y="-630"/>
         </scene>
@@ -209,25 +209,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="event name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y5h-n4-ny2" userLabel="eventname">
-                                <rect key="frame" x="24" y="298" width="553" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y5h-n4-ny2" userLabel="eventname">
+                                <rect key="frame" x="16" y="161" width="553" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spQ-Fw-fvt">
-                                <rect key="frame" x="31" y="382" width="553" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="hVw-pr-JoT">
+                                <rect key="frame" x="16" y="213" width="450" height="86"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <datePicker contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TWq-dF-dJk">
+                                <rect key="frame" x="39" y="329" width="395" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="vpn-iU-fGu"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="448565199.36275798">
+                                    <!--2015-03-20 17:26:39 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="spQ-Fw-fvt" firstAttribute="leading" secondItem="RYe-n9-LYf" secondAttribute="leadingMargin" constant="8" id="18C-1K-tIa"/>
+                            <constraint firstItem="hVw-pr-JoT" firstAttribute="leading" secondItem="RYe-n9-LYf" secondAttribute="leadingMargin" constant="8" id="5jh-Vo-KD3"/>
+                            <constraint firstAttribute="centerX" secondItem="TWq-dF-dJk" secondAttribute="centerX" id="6gh-T4-g6K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y5h-n4-ny2" secondAttribute="trailing" constant="7" id="6nI-gN-p42"/>
                             <constraint firstAttribute="centerX" secondItem="Y5h-n4-ny2" secondAttribute="centerX" id="73b-k4-5u4"/>
-                            <constraint firstAttribute="centerX" secondItem="spQ-Fw-fvt" secondAttribute="centerX" id="Kw8-Ux-VdE"/>
-                            <constraint firstAttribute="centerY" secondItem="Y5h-n4-ny2" secondAttribute="centerY" id="bYE-To-LdQ"/>
+                            <constraint firstAttribute="centerX" secondItem="hVw-pr-JoT" secondAttribute="centerX" id="9hh-Zh-PvO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ap8-rc-LSW">
@@ -244,7 +255,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButton" destination="8Qa-Ta-6Hs" id="9mv-Ln-L2W"/>
-                        <outlet property="eventDescription" destination="spQ-Fw-fvt" id="cuN-nv-X5B"/>
+                        <outlet property="date" destination="TWq-dF-dJk" id="cHl-Rb-Mrm"/>
+                        <outlet property="eventDescription" destination="hVw-pr-JoT" id="zK0-C4-aeK"/>
                         <outlet property="eventName" destination="Y5h-n4-ny2" id="Fhv-0r-sJT"/>
                         <outlet property="saveButton" destination="MIJ-O1-hg6" id="Pgd-VC-2t2"/>
                     </connections>
@@ -252,7 +264,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSz-F9-iI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FpL-Uv-xI7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2198" y="-638"/>
+            <point key="canvasLocation" x="2162" y="-630"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">

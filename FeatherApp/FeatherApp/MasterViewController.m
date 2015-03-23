@@ -109,7 +109,7 @@
 
     Event *event = self.objects[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", event.title];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",event.desc];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",event.date];
     return cell;
 }
 
