@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *eventDescription;
 @property (weak, nonatomic) IBOutlet UIDatePicker *date;
+@property (weak, nonatomic) IBOutlet UITextField *location;
 
 @end
 
@@ -49,6 +50,7 @@
         self.event.title = self.eventName.text;
         self.event.desc = self.eventDescription.text;
         self.event.date = [self.date date];
+        self.event.location = self.location.text;
     }
 }
 

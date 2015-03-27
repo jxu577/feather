@@ -107,7 +107,13 @@
 
     Event *event = self.objects[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", event.title];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",event.date];
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"EE M/d"];
+    NSString *dateString = [dateFormat stringFromDate:event.date];
+    //[dateFormat release];
+    
+    cell.detailTextLabel.text = dateString;
     return cell;
 }
 

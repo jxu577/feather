@@ -15,6 +15,8 @@
 @end
 
 @implementation DetailViewController
+@synthesize titleLabel;
+
 
 #pragma mark - Managing the detail item
 
@@ -32,7 +34,8 @@
     if (self.detailItem) {
         Event *event = self.detailItem;
         //self.detailDescriptionLabel.text = [NSString stringWithFormat:@"%@",event.date];
-        self.detailDescriptionLabel.text =[NSString stringWithFormat:@"%@/%@", event.title, event.desc];
+        self.titleLabel.text =[NSString stringWithFormat:@"%@", event.title];
+        self.detailDescriptionLabel.text =[NSString stringWithFormat:@"%@", event.desc];
     }
 }
 

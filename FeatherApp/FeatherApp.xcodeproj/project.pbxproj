@@ -30,6 +30,7 @@
 		3BBF36B11AB4F65100D5355D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBF36B01AB4F65100D5355D /* SystemConfiguration.framework */; };
 		3BBF36B31AB4F65700D5355D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBF36B21AB4F65700D5355D /* libz.dylib */; };
 		3BBF36B51AB4F65D00D5355D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBF36B41AB4F65D00D5355D /* libsqlite3.dylib */; };
+		4F3B8DC71AC4F54C0018C87E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3B8DC61AC4F54C0018C87E /* MapKit.framework */; };
 		4F885BB31AB2B26500DF24EE /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F885BB21AB2B26500DF24EE /* Event.m */; };
 		4F885BB61AB2C33F00DF24EE /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F885BB51AB2C33F00DF24EE /* AddEventViewController.m */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		3BBF36B01AB4F65100D5355D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3BBF36B21AB4F65700D5355D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3BBF36B41AB4F65D00D5355D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4F3B8DC61AC4F54C0018C87E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4F885BB11AB2B26500DF24EE /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		4F885BB21AB2B26500DF24EE /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		4F885BB41AB2C33F00DF24EE /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				3BBF36B31AB4F65700D5355D /* libz.dylib in Frameworks */,
 				3BBF36B11AB4F65100D5355D /* SystemConfiguration.framework in Frameworks */,
 				3BBF36AF1AB4F64A00D5355D /* StoreKit.framework in Frameworks */,
+				4F3B8DC71AC4F54C0018C87E /* MapKit.framework in Frameworks */,
 				3BBF36AD1AB4F64300D5355D /* Security.framework in Frameworks */,
 				3BBF36AB1AB4F63D00D5355D /* QuartzCore.framework in Frameworks */,
 				3BBF36A91AB4F63800D5355D /* MobileCoreServices.framework in Frameworks */,
@@ -196,6 +199,7 @@
 		3BBF369B1AB4F41E00D5355D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F3B8DC61AC4F54C0018C87E /* MapKit.framework */,
 				3BBF36B41AB4F65D00D5355D /* libsqlite3.dylib */,
 				3BBF36B21AB4F65700D5355D /* libz.dylib */,
 				3BBF36B01AB4F65100D5355D /* SystemConfiguration.framework */,
@@ -269,6 +273,11 @@
 				TargetAttributes = {
 					3B2F9D0F1AB2A8320029F357 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3B2F9D2B1AB2A8330029F357 = {
 						CreatedOnToolsVersion = 6.1.1;

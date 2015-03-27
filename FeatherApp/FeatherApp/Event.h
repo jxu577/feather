@@ -13,5 +13,6 @@
 @property NSString *title;
 @property NSString *desc;
 @property NSDate *date;
+@property NSString *location;
 
 @end

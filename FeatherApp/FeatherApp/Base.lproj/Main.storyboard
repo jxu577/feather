@@ -23,6 +23,7 @@
         <!--Detail-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
                 <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
@@ -39,10 +40,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADG-wi-JvV">
+                                <rect key="frame" x="178" y="180" width="245" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ADG-wi-JvV" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="8" id="Fz7-KR-cem"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
+                            <constraint firstAttribute="centerX" secondItem="ADG-wi-JvV" secondAttribute="centerX" id="ewh-eI-xeI"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
                             <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
                         </constraints>
@@ -51,11 +60,11 @@
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
+                        <outlet property="titleLabel" destination="ADG-wi-JvV" id="oC9-P9-BTn"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693" y="129"/>
+            <point key="canvasLocation" x="622" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5a7-mx-7IJ">
@@ -249,19 +258,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y5h-n4-ny2" userLabel="eventname">
-                                <rect key="frame" x="16" y="161" width="553" height="30"/>
+                                <rect key="frame" x="16" y="92" width="553" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="hVw-pr-JoT">
-                                <rect key="frame" x="16" y="213" width="450" height="86"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <datePicker contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TWq-dF-dJk">
-                                <rect key="frame" x="39" y="329" width="395" height="162"/>
+                                <rect key="frame" x="16" y="424" width="395" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="vpn-iU-fGu"/>
                                 </constraints>
@@ -269,6 +271,22 @@
                                     <!--2015-03-20 17:26:39 +0000-->
                                 </date>
                             </datePicker>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vrm-Ib-wP8">
+                                <rect key="frame" x="17" y="216" width="395" height="202"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uk9-1l-UEi">
+                                <rect key="frame" x="16" y="220" width="553" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="hVw-pr-JoT">
+                                <rect key="frame" x="16" y="124" width="450" height="71"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -278,6 +296,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Y5h-n4-ny2" secondAttribute="trailing" constant="7" id="6nI-gN-p42"/>
                             <constraint firstAttribute="centerX" secondItem="Y5h-n4-ny2" secondAttribute="centerX" id="73b-k4-5u4"/>
                             <constraint firstAttribute="centerX" secondItem="hVw-pr-JoT" secondAttribute="centerX" id="9hh-Zh-PvO"/>
+                            <constraint firstAttribute="centerX" secondItem="vrm-Ib-wP8" secondAttribute="centerX" id="T5S-pF-sTv"/>
+                            <constraint firstAttribute="centerX" secondItem="uk9-1l-UEi" secondAttribute="centerX" id="s5c-BS-eZk"/>
+                            <constraint firstItem="uk9-1l-UEi" firstAttribute="leading" secondItem="RYe-n9-LYf" secondAttribute="leadingMargin" constant="8" id="ugk-Bi-FwD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ap8-rc-LSW">
@@ -297,13 +318,14 @@
                         <outlet property="date" destination="TWq-dF-dJk" id="cHl-Rb-Mrm"/>
                         <outlet property="eventDescription" destination="hVw-pr-JoT" id="zK0-C4-aeK"/>
                         <outlet property="eventName" destination="Y5h-n4-ny2" id="Fhv-0r-sJT"/>
+                        <outlet property="location" destination="uk9-1l-UEi" id="o4Y-uR-dXp"/>
                         <outlet property="saveButton" destination="MIJ-O1-hg6" id="Pgd-VC-2t2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSz-F9-iI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FpL-Uv-xI7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2162" y="-630"/>
+            <point key="canvasLocation" x="2224" y="-638"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
